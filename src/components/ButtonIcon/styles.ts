@@ -21,6 +21,11 @@ export const styles = StyleSheet.create({
     height: 56,
     justifyContent: 'center',
     alignItems: 'center',
+    borderRightWidth: 1,
+    borderRightColor: theme.colors.line,
   },
-  icon: {},
+  icon: {
+    width: 24,
+    height: 18,
+  },
 });
