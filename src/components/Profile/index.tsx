@@ -11,7 +11,7 @@ export function Profile() {
       <Avatar urlImage={'https://github.com/wdrik.png'} />
       <View>
         <View style={styles.user}>
-          <Text style={styles.greeting}>Olá</Text>
+          <Text style={styles.greeting}>Olá, </Text>
 
           <Text style={styles.username}>Iorgen</Text>
         </View>
