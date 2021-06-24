@@ -3,6 +3,8 @@ import { TextInput, TextInputProps } from 'react-native';
 
 import { styles } from './styles';
 
-export function Profile({ ...rest }: TextInputProps) {
-  return <TextInput style={styles.container} {...rest} />;
+export function SmallInput({ ...rest }: TextInputProps) {
+  return (
+    <TextInput style={styles.container} {...rest} keyboardType="numeric" />
+  );
 }
