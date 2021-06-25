@@ -51,4 +51,9 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.text500,
     color: theme.colors.highlight,
   },
+  catacteresLimit: {
+    fontFamily: theme.fonts.text400,
+    color: theme.colors.highlight,
+    fontSize: 13,
+  },
 });
