@@ -9,6 +9,8 @@ import {
   Rajdhani_700Bold,
 } from '@expo-google-fonts/rajdhani';
 
+import { AuthProvider } from './src/hooks/auth';
+
 import { Routes } from './src/routes';
 import { Background } from './src/components/Background';
 
@@ -32,7 +34,9 @@ export default function App() {
         translucent
       />
 
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </Background>
   );
 }
