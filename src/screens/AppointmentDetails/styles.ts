@@ -29,11 +29,11 @@ export const styles = StyleSheet.create({
   },
   members: {
     marginLeft: 24,
-    marginRight: 27,
+    marginTop: 27,
   },
   footer: {
     paddingHorizontal: 24,
     paddingVertical: 20,
-    margin: getBottomSpace(),
+    marginBottom: getBottomSpace(),
   },
 });

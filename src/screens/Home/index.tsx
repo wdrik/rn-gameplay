@@ -26,8 +26,8 @@ export function Home() {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   }
 
-  function handleAppointmentDetails() {
-    navigation.navigate('AppointmentDetails');
+  function handleAppointmentDetails(guildSelected: AppointmentProps) {
+    navigation.navigate('AppointmentDetails', { guildSelected });
   }
 
   function handleAppointmentCreate() {
@@ -69,7 +69,10 @@ export function Home() {
         <Load />
       ) : (
         <>
-          <ListHeader title={'Partidas agendadas'} subtitle={'total: 6'} />
+          <ListHeader
+            title={'Partidas agendadas'}
+            subtitle={`total: ${appointments.length}`}
+          />
 
           <FlatList
             data={appointments}
@@ -77,7 +80,10 @@ export function Home() {
             style={styles.matches}
             showsVerticalScrollIndicator={false}
             renderItem={({ item }) => (
-              <Appointment data={item} onPress={handleAppointmentDetails} />
+              <Appointment
+                data={item}
+                onPress={() => handleAppointmentDetails(item)}
+              />
             )}
             ItemSeparatorComponent={() => <ListDivider />}
             contentContainerStyle={{ paddingBottom: 69 }}
